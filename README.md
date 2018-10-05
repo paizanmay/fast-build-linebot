@@ -24,4 +24,22 @@ heroku create
 ```bash
 pipenv install
 ```
+接著就可以對程式碼做改動了！ 
+先把 `flask_test.py` 裡的兩個 Line 需要的 Token 換成 Line console 裡的你自己的 Token
+改動完之後就要來 deploy 到 heroku 上了
+```bash
+git add .
+git commit -m "Commit Message"
+git push heroku master
+heroku ps:scale web=1
+heroku open
+```
+到這一步應該會打開一個網頁，網頁顯示 `Server is Running` 就沒有問題了！  
 
+# How to Update Code
+之後對程式碼做改動後要部署到 heroku，只需要執行以下程式碼即可
+```bash
+git add .
+git commit -m "Commit Message"
+git push heroku master
+```
